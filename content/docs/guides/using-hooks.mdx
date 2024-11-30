@@ -1,3 +1,29 @@
 ---
 title: Using Hooks
 ---
+
+Referral programs are made up of hooks, which are smart contracts that get called every time the referral program is interacted with.
+
+## Inheriting the hook interface
+
+```solidity
+interface IERPHook {
+    function beforeReferral(
+        uint256 programId,
+        address account,
+        address referral
+    ) external;
+    
+    function afterReferral(
+        uint256 programId,
+        address account,
+        address referral
+    ) external;
+}
+```
+
+In order to make your hook smart contracts compatible with ERP, they must inherit the [IERPHook](/docs/deployed-contracts) interface.
+
+## Hook functions
+
+The hook interface has two functions, ```beforeReferral``` and ```afterReferral```. These functions are called before and after a referral respectively. You can override these functions to develop your own custom logic which is run atomically on new referrals.
