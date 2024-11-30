@@ -1,0 +1,40 @@
+---
+title: IERPHook.sol
+---
+
+[contracts/src/IERPHook.sol](https://github.com/eth-referral-protocol/contracts/blob/main/src/IERPHook.sol)
+
+## beforeReferral
+
+```solidity
+function beforeReferral(
+    uint256 programId, 
+    address account, 
+    address referral
+) external
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| programId | uint256 | Unique ID of the referral program |
+| account | address | Address of the referee |
+| referral | address | Address of the referrer |
+
+## afterReferral
+
+```solidity
+function afterReferral(
+    uint256 programId, 
+    address account, 
+    address referral
+) external
+```
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| programId | uint256 | Unique ID of the referral program |
+| account | address | Address of the referee |
+| referral | address | Address of the referrer |

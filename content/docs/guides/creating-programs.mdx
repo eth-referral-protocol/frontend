@@ -1,0 +1,20 @@
+---
+title: Creating Programs
+---
+
+In this guide, you will create a new referral program, and be returned its unique program ID.
+
+## Calling newReferralProgram
+
+```solidity
+function newReferralProgram(
+    address to,
+    address[] memory hooks
+) external returns (
+    uint256 programId
+)
+```
+
+Calling the ```newReferralProgram``` function on the [ERP smart contract](/docs/deployed-contracts) will return a program ID. This unique ID is what will be used to reference your referral program in the future.
+
+This function also takes a parameter called hooks, this is an array of addresses that must inherit the [IERPHooks](/docs/interfaces/ierp-hook) interface, and will be called before, and after all new referrals, and is how you will build your custom referral logic.

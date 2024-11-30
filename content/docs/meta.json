@@ -1,0 +1,12 @@
+{
+    "pages": [
+        "---Overview---",
+        "index",
+        "---Developers---",
+        "guides",
+        "interfaces",
+        "deployed-contracts",
+        "---Resources---",
+        "[GitHub](https://github.com/eth-referral-protocol/contracts)"
+    ]
+}
