@@ -1,18 +1,43 @@
 import './global.css';
 import { RootProvider } from 'fumadocs-ui/provider';
-import { Inter } from 'next/font/google';
-import type { ReactNode } from 'react';
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import { cn } from '@/lib/utils';
 
-const inter = Inter({
-  subsets: ['latin'],
+const geistSans = localFont({
+	src: "./fonts/GeistVF.woff",
+	variable: "--font-geist-sans",
+	weight: "100 900",
+});
+const geistMono = localFont({
+	src: "./fonts/GeistMonoVF.woff",
+	variable: "--font-geist-mono",
+	weight: "100 900",
 });
 
-export default function Layout({ children }: { children: ReactNode }) {
-  return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen">
-        <RootProvider>{children}</RootProvider>
-      </body>
-    </html>
-  );
+export const metadata: Metadata = {
+	title: "Ethereum Referral Protocol",
+	description: "Decentralized referral protocol on Ethereum",
+};
+
+export default function RootLayout({
+	children,
+}: Readonly<{
+	children: React.ReactNode;
+}>) {
+	return (
+		<html lang="en" suppressHydrationWarning>
+			<body
+				className={cn(
+					geistSans.variable,
+					geistMono.variable,
+					"flex flex-col min-h-screen antialiased"
+				)}
+			>
+				<RootProvider>
+					{children}
+				</RootProvider>
+			</body>
+		</html>
+	);
 }
