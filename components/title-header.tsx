@@ -18,12 +18,12 @@ export default function TitleHeader() {
                     transition={{ duration: 0.8 }}
                     className="space-y-8"
                 >
-                    <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
+                    <h1 className="text-5xl md:text-6xl font-bold tracking-tighter">
                         ETHEREUM
                         <span className="block text-cyan-400">REFERRAL PROTOCOL</span>
                     </h1>
-                    <p className="mx-auto max-w-[600px] text-xl text-gray-400">
-                        Custom referral programs on Ethereum
+                    <p className="mx-auto max-w-[300px] md:max-w-[600px] text-xl text-gray-400">
+                        Rocket fuel for growth 🚀
                     </p>
                 </motion.div>
             </div>

@@ -24,6 +24,6 @@ interface IERPHook {
 
 In order to make your hook smart contracts compatible with ERP, they must inherit the [IERPHook](/docs/deployed-contracts) interface.
 
-## Hook functions
+## Overriding hook functions
 
 The hook interface has two functions, ```beforeReferral``` and ```afterReferral```. These functions are called before and after a referral respectively. You can override these functions to develop your own custom logic which is run atomically on new referrals.

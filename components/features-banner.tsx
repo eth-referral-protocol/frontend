@@ -5,11 +5,11 @@ import { AtomIcon, Share2Icon, ShieldIcon } from "lucide-react";
 
 export default function FeaturesBanner() {
     return (
-        <div className="container mx-auto px-6 py-24 relative z-10">
+        <div className="container mx-auto px-6 relative z-10">
             <div className="grid gap-12 md:grid-cols-3">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
                     className="space-y-4 text-center"
                 >
@@ -21,7 +21,7 @@ export default function FeaturesBanner() {
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="space-y-4 text-center"
                 >
@@ -33,7 +33,7 @@ export default function FeaturesBanner() {
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="space-y-4 text-center"
                 >
