@@ -1,6 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function TitleHeader() {
     return (
@@ -18,13 +20,19 @@ export default function TitleHeader() {
                     transition={{ duration: 0.8 }}
                     className="space-y-8"
                 >
-                    <h1 className="text-5xl md:text-6xl font-bold tracking-tighter">
+                    <h1 className="text-5xl md:text-6xl font-bold">
                         ETHEREUM
                         <span className="block text-cyan-400">REFERRAL PROTOCOL</span>
                     </h1>
-                    <p className="mx-auto max-w-[300px] md:max-w-[600px] text-xl text-gray-400">
-                        Rocket fuel for growth 🚀
-                    </p>
+                    <div>
+                        <Link
+                            href="/docs"
+                        >
+                            <Button>
+                                Get Started
+                            </Button>
+                        </Link>
+                    </div>
                 </motion.div>
             </div>
         </div>

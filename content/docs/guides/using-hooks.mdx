@@ -9,15 +9,15 @@ Referral programs are made up of hooks, which are smart contracts that get calle
 ```solidity
 interface IERPHook {
     function beforeReferral(
-        uint256 programId,
-        address account,
-        address referral
+        bytes32 programId,
+        address referral,
+        address referrer
     ) external;
     
     function afterReferral(
-        uint256 programId,
-        address account,
-        address referral
+        bytes32 programId,
+        address referral,
+        address referrer
     ) external;
 }
 ```

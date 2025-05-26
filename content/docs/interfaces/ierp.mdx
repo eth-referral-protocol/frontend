@@ -4,104 +4,12 @@ title: IERP.sol
 
 [contracts/src/IERP.sol](https://github.com/eth-referral-protocol/contracts/blob/main/src/IERP.sol)
 
-## getReferralProgram
-
-```solidity
-function getReferralProgram(
-    uint256 programId
-) external view returns (
-    address[] memory hooks
-)
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| --- | --- | --- |
-| programId | uint256 | Unique ID of the referral program |
-
-#### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| hooks | address[] | Array of referral hooks |
-
-## getTotalReferrals
-
-```solidity
-function getTotalReferrals(
-    uint256 programId,
-    address account
-) external view returns (
-    uint256 total
-)
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| --- | --- | --- |
-| programId | uint256 | Unique ID of the referral program |
-| account | address | Address of the referee |
-
-#### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| total | uint256 | Referrers total referrals in a program |
-
-## getReferral
-
-```solidity
-function getReferral(
-    uint256 programId,
-    address account
-) external view returns (
-    address referral
-)
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| --- | --- | --- |
-| programId | uint256 | Unique ID of the referral program |
-| account | address | Address of the referee |
-
-#### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| referral | address | Address of the referrer |
-
 ## newReferralProgram
 
 ```solidity
 function newReferralProgram(
-    address[] memory hooks
-) external returns (
-    uint256 programId
-)
-```
-
-#### Parameters
-
-| Name | Type | Description |
-| --- | --- | --- |
-| hooks | address[] | Array of referral hooks |
-
-#### Returns
-
-| Name | Type | Description |
-| --- | --- | --- |
-| programId | uint256 | Unique ID of the referral program |
-
-## setReferral
-
-```solidity
-function setReferral(
-    uint256 programId, 
-    address referral
+    bytes32 programId, 
+    address hook
 ) external
 ```
 
@@ -109,5 +17,91 @@ function setReferral(
 
 | Name | Type | Description |
 | --- | --- | --- |
-| programId | uint256 | Unique ID of the referral program |
-| referral | address | Address of the referrer |
+| programId | bytes32 | Unique ID of the referral program |
+| hook | address | Referral program hook |
+
+## newReferral
+
+```solidity
+function newReferral(
+    bytes32 programId, 
+    address referrer
+) external
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| programId | bytes32 | Unique ID of the referral program |
+| referrer | address | Address of the referrer |
+
+## getReferrer
+
+```solidity
+function getReferrer(
+    bytes32 programId,
+    address referral
+) external view returns (
+    address referrer
+)
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| programId | bytes32 | Unique ID of the referral program |
+| referral | address | Address of the referral |
+
+#### Returns
+
+| Name | Type | Description |
+| --- | --- | --- |
+| referrer | address | Address of the referrer |
+
+## getTotalReferrals
+
+```solidity
+function getTotalReferrals(
+    bytes32 programId,
+    address referrer
+) external view returns (
+    uint256 totalReferrals
+)
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| programId | bytes32 | Unique ID of the referral program |
+| referrer | address | Address of the referrer |
+
+#### Returns
+
+| Name | Type | Description |
+| --- | --- | --- |
+| totalReferrals | uint256 | Referrers total referrals in a program |
+
+## getReferralProgramHook
+
+```solidity
+function getReferralProgramHook(
+    uint256 programId
+) external view returns (
+    address hook
+)
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| programId | bytes32 | Unique ID of the referral program |
+
+#### Returns
+
+| Name | Type | Description |
+| --- | --- | --- |
+| hook | address | Referral program hook |

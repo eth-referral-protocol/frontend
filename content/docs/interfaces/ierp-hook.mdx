@@ -8,9 +8,9 @@ title: IERPHook.sol
 
 ```solidity
 function beforeReferral(
-    uint256 programId, 
-    address account, 
-    address referral
+    bytes32 programId,
+    address referral,
+    address referrer
 ) external
 ```
 
@@ -18,23 +18,23 @@ function beforeReferral(
 
 | Name | Type | Description |
 | --- | --- | --- |
-| programId | uint256 | Unique ID of the referral program |
-| account | address | Address of the referee |
-| referral | address | Address of the referrer |
+| programId | bytes32 | Unique ID of the referral program |
+| referral | address | Address of the referral |
+| referrer | address | Address of the referrer |
 
 ## afterReferral
 
 ```solidity
 function afterReferral(
-    uint256 programId, 
-    address account, 
-    address referral
+    bytes32 programId,
+    address referral,
+    address referrer
 ) external
 ```
 #### Parameters
 
 | Name | Type | Description |
 | --- | --- | --- |
-| programId | uint256 | Unique ID of the referral program |
-| account | address | Address of the referee |
-| referral | address | Address of the referrer |
+| programId | bytes32 | Unique ID of the referral program |
+| referral | address | Address of the referral |
+| referrer | address | Address of the referrer |

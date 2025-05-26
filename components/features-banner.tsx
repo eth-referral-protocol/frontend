@@ -29,7 +29,7 @@ export default function FeaturesBanner() {
                         <ShieldIcon className="h-full w-full text-cyan-400" />
                     </div>
                     <h3 className="text-xl font-bold">Secure & Transparent</h3>
-                    <p className="text-gray-400 max-w-80 mx-auto">Deployed on Ethereum with immutable smart contracts and open-source code</p>
+                    <p className="text-gray-400 max-w-80 mx-auto">Deployed with immutable smart contracts and open-source code</p>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
