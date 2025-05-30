@@ -8,7 +8,7 @@ import React from "react";
 export default function UseCaseBanner() {
     return (
         <div
-            className="w-fit mx-auto"
+            className="w-fit mx-auto px-4"
         >
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -17,7 +17,7 @@ export default function UseCaseBanner() {
                 className="flex flex-col space-y-8 items-center w-fit"
             >
                 <div
-                    className="text-3xl font-bold"
+                    className="text-3xl font-bold text-center"
                 >
                     What ERP is based at
                 </div>
